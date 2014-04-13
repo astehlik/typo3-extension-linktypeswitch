@@ -1,0 +1,32 @@
+
+.tx-linktypeswitch-link-page-non-existing::before,
+.tx-linktypeswitch-page-access-denied a::before,
+.tx-linktypeswitch-page-access-granted a::before,
+.tx-linktypeswitch-page-access-undecided a::before {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	vertical-align: middle;
+	padding-right: 4px;
+	background-repeat: no-repeat;
+	content: "";
+}
+
+.tx-linktypeswitch-link-page-non-existing::before {
+	background-image: url('../Images/Error.png');
+}
+
+.tx-linktypeswitch-page-access-denied a {
+	cursor: not-allowed;
+}
+.tx-linktypeswitch-page-access-denied a::before {
+	background-image: url('../Images/KeyDelete.png');
+}
+
+.tx-linktypeswitch-page-access-granted a::before {
+	background-image: url('../Images/KeyGo.png');
+}
+
+.tx-linktypeswitch-page-access-undecided a::before {
+	background-image: url('../Images/Key.png');
+}
