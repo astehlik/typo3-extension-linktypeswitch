@@ -1,6 +1,4 @@
 
-// Since will cause problems for non accessible links if enabled.
-config.typolinkLinkAccessRestrictedPages = 0
 
 temp.parseFunc_RTE.tags.link < lib.parseFunc_RTE.tags.link
 temp.parseFunc_RTE.tags.link.typolink.linkAccessRestrictedPages = 1
