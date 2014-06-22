@@ -18,7 +18,7 @@ $EM_CONF[$_EXTKEY] = array (
   'priority' => '',
   'loadOrder' => '',
   'module' => '',
-  'state' => 'alpha',
+  'state' => 'beta',
   'internal' => 0,
   'uploadfolder' => 0,
   'createDirs' => '',
@@ -29,7 +29,7 @@ $EM_CONF[$_EXTKEY] = array (
   'author_email' => 'alexander.stehlik.deleteme@gmail.com',
   'CGLcompliance' => '',
   'CGLcompliance_note' => '',
-  'version' => '0.0.1',
+  'version' => '0.1.0',
   '_md5_values_when_last_written' => '',
   'constraints' => 
   array (
