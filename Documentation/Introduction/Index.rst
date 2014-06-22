@@ -17,6 +17,18 @@ Introduction
 What does it do?
 ----------------
 
+This Extension consists of two different areas.
+
+The first area is the highlighting of different link types (e.g. links
+to access restricted pages or links to which the user has no access.
+
+The other area is an improved error handling including the detection
+of 403 (Forbidden) errors and a redirection of non logged in users
+to the login page on 403 errors.
+
+Link type detection
+~~~~~~~~~~~~~~~~~~~
+
 This Extension provides a user function that determines the link type.
 
 Currently it can **only be used inside a parseFunc** call.
@@ -35,6 +47,21 @@ PageUnrestricted              Link to a page with no access restrictions
 ============================= ======================================================
 
 See also :php:`Tx\Linktypeswitch\Domain\Model\Enumeration\LinkType`.
+
+Error handling
+~~~~~~~~~~~~~~
+
+The error handling will improve the detection of the error type in the
+Frontend. This means that when a page is not accessible because it is
+protected the user will get a 403 (Forbidden) error instead of a 400
+(Not found).
+
+Additinally a user can be redirected to the login page when he accesses
+a protected page and is not logged in.
+
+Please note that these features need configuration in the Extension
+Manager and in the TypoScript template. You can find more information
+in the administration and the configuration sections of this manual.
 
 .. _screenshots:
 

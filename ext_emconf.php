@@ -9,8 +9,8 @@
 *********************************************************************/
 
 $EM_CONF[$_EXTKEY] = array (
-  'title' => 'Link type switch',
-  'description' => 'Different behavior for links with different type (e.g. to access restricted pages).',
+  'title' => 'Link type switch / error handling',
+  'description' => 'Allows config of different link types (e.g. to access restricted pages), improved error handling and redirect to login page.',
   'category' => 'fe',
   'shy' => 1,
   'dependencies' => '',

@@ -1,0 +1,22 @@
+
+config.tx_linktypeswitch.loginPageUrl = COA
+config.tx_linktypeswitch.loginPageUrl {
+
+	if.isTrue = {$plugin.tx_linktypeswitch.loginPageTypolinkParameter}
+
+	10 = TEXT
+	10.typolink {
+		parameter = {$plugin.tx_linktypeswitch.loginPageTypolinkParameter}
+		returnLast = url
+
+		additionalParams.cObject = COA
+		additionalParams.cObject.20 = TEXT
+		additionalParams.cObject.20 {
+			data = getIndpEnv : TYPO3_REQUEST_URL
+			rawUrlEncode = 1
+			wrap = &redirect_url=|
+		}
+
+		forceAbsoluteUrl = 1
+	}
+}
