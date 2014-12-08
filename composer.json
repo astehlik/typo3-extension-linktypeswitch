@@ -1,8 +1,12 @@
 {
-	"name": "astehlik-typo3-extension/linktypeswitch",
+	"name": "de-swebhosting-typo3-extension/linktypeswitch",
 	"description": "Allows config of different link types (e.g. to access restricted pages), improved error handling and redirect to login page.",
 	"type": "typo3-cms-extension",
 	"version": "0.1.0",
+	"license": "GPL-3.0+",
+	"replace": {
+		"linktypeswitch": "self.version"
+	},
 	"autoload": {
 		"psr-4": {
 			"Tx\\Linktypeswitch\\": "Classes/"
