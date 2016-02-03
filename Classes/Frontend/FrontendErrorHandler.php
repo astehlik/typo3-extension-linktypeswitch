@@ -190,7 +190,7 @@ class FrontendErrorHandler {
 			$contentObject = GeneralUtility::makeInstance('TYPO3\\CMS\\Frontend\\ContentObject\\ContentObjectRenderer');
 			$this->frontendController->tmpl = $template;
 			$this->frontendController->config['config'] = $template->setup['config.'];
-			$this->frontendController->config['mainScript'] = trim($this->config['config']['mainScript']) ?: 'index.php';
+			$this->frontendController->config['mainScript'] = trim($this->frontendController->config['config']['mainScript']) ?: 'index.php';
 			$targetUrl = $contentObject->cObjGetSingle($targetUrl, $template->setup['config.']['tx_linktypeswitch.']['loginPageUrl.']);
 		}
 
