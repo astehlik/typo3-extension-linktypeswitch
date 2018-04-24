@@ -15,7 +15,12 @@ lib.parseFunc.tags.link {
   PageRestrictedAccessDenied.wrap = <span class="tx-linktypeswitch-page-access-denied">|</span>
 
   PageRestrictedAccessGranted < temp.parseFunc.tags.link
-  PageRestrictedAccessGranted.wrap = <span class="tx-linktypeswitch-page-access-granted">|</span>
+  PageRestrictedAccessGranted.outerWrap.cObject = COA
+  PageRestrictedAccessGranted.outerWrap.cObject.10 = TEXT
+  PageRestrictedAccessGranted.outerWrap.cObject.10.value = tx-linktypeswitch-page-access-granted
+  PageRestrictedAccessGranted.outerWrap.cObject.10.override = tx-linktypeswitch-page-access-granted-no-highlight
+  PageRestrictedAccessGranted.outerWrap.cObject.10.override.if.isTrue = {$styles.content.links.linktypeswitch.disableAccessGrantedHighlight}
+  PageRestrictedAccessGranted.outerWrap.cObject.wrap = <span class="|">|</span>
 
   PageRestrictedAccessUndecided < temp.parseFunc.tags.link
   PageRestrictedAccessUndecided.wrap = <span class="tx-linktypeswitch-page-access-undecided">|</span>
@@ -44,7 +49,7 @@ lib.parseFunc_RTE.tags.link {
   PageRestrictedAccessDenied.wrap = <span class="tx-linktypeswitch-page-access-denied">|</span>
 
   PageRestrictedAccessGranted < temp.parseFunc_RTE.tags.link
-  PageRestrictedAccessGranted.wrap = <span class="tx-linktypeswitch-page-access-granted">|</span>
+  PageRestrictedAccessGranted.outerWrap < lib.parseFunc.tags.link.PageRestrictedAccessGranted.outerWrap
 
   PageRestrictedAccessUndecided < temp.parseFunc_RTE.tags.link
   PageRestrictedAccessUndecided.wrap = <span class="tx-linktypeswitch-page-access-undecided">|</span>

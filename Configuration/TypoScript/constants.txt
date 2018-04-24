@@ -1,0 +1,3 @@
+
+# cat=content/links; type=boolean; label= No access granted highlight: Disable highlighting of links with granted access.
+styles.content.links.linktypeswitch.disableAccessGrantedHighlight = 0
