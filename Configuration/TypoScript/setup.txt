@@ -1,27 +1,30 @@
-
 temp.parseFunc.tags.link < lib.parseFunc.tags.link
 temp.parseFunc.tags.link.typolink.linkAccessRestrictedPages = 1
 
 lib.parseFunc.tags.link >
 lib.parseFunc.tags.link = CASE
 lib.parseFunc.tags.link {
+  External < temp.parseFunc.tags.link
+  External.wrap = <span class="tx-linktypeswitch-link-external">|</span>
 
-	External < temp.parseFunc.tags.link
-	External.wrap = <span class="tx-linktypeswitch-link-external">|</span>
-	PageNonExisting = TEXT
-	PageNonExisting.current = 1
-	PageNonExisting.wrap = <span class="tx-linktypeswitch-link-page-non-existing">|</span>
-	PageRestrictedAccessDenied < temp.parseFunc.tags.link
-	PageRestrictedAccessDenied.wrap = <span class="tx-linktypeswitch-page-access-denied">|</span>
-	PageRestrictedAccessGranted < temp.parseFunc.tags.link
-	PageRestrictedAccessGranted.wrap = <span class="tx-linktypeswitch-page-access-granted">|</span>
-	PageRestrictedAccessUndecided < temp.parseFunc.tags.link
-	PageRestrictedAccessUndecided.wrap = <span class="tx-linktypeswitch-page-access-undecided">|</span>
-	PageUnrestricted < temp.parseFunc.tags.link
-	PageUnrestricted.wrap = <span class="tx-linktypeswitch-page-unrestricted">|</span>
+  PageNonExisting = TEXT
+  PageNonExisting.current = 1
+  PageNonExisting.wrap = <span class="tx-linktypeswitch-link-page-non-existing">|</span>
 
-	key.cObject = USER
-	key.cObject.userFunc = Tx\Linktypeswitch\LinkTypeDetector->detectLinkType
+  PageRestrictedAccessDenied < temp.parseFunc.tags.link
+  PageRestrictedAccessDenied.wrap = <span class="tx-linktypeswitch-page-access-denied">|</span>
+
+  PageRestrictedAccessGranted < temp.parseFunc.tags.link
+  PageRestrictedAccessGranted.wrap = <span class="tx-linktypeswitch-page-access-granted">|</span>
+
+  PageRestrictedAccessUndecided < temp.parseFunc.tags.link
+  PageRestrictedAccessUndecided.wrap = <span class="tx-linktypeswitch-page-access-undecided">|</span>
+
+  PageUnrestricted < temp.parseFunc.tags.link
+  PageUnrestricted.wrap = <span class="tx-linktypeswitch-page-unrestricted">|</span>
+
+  key.cObject = USER
+  key.cObject.userFunc = Tx\Linktypeswitch\LinkTypeDetector->detectLinkType
 }
 
 temp.parseFunc_RTE.tags.link < lib.parseFunc_RTE.tags.link
@@ -30,23 +33,27 @@ temp.parseFunc_RTE.tags.link.typolink.linkAccessRestrictedPages = 1
 lib.parseFunc_RTE.tags.link >
 lib.parseFunc_RTE.tags.link = CASE
 lib.parseFunc_RTE.tags.link {
+  External < temp.parseFunc_RTE.tags.link
+  External.wrap = <span class="tx-linktypeswitch-link-external">|</span>
 
-	External < temp.parseFunc_RTE.tags.link
-	External.wrap = <span class="tx-linktypeswitch-link-external">|</span>
-	PageNonExisting = TEXT
-	PageNonExisting.current = 1
-	PageNonExisting.wrap = <span class="tx-linktypeswitch-link-page-non-existing">|</span>
-	PageRestrictedAccessDenied < temp.parseFunc_RTE.tags.link
-	PageRestrictedAccessDenied.wrap = <span class="tx-linktypeswitch-page-access-denied">|</span>
-	PageRestrictedAccessGranted < temp.parseFunc_RTE.tags.link
-	PageRestrictedAccessGranted.wrap = <span class="tx-linktypeswitch-page-access-granted">|</span>
-	PageRestrictedAccessUndecided < temp.parseFunc_RTE.tags.link
-	PageRestrictedAccessUndecided.wrap = <span class="tx-linktypeswitch-page-access-undecided">|</span>
-	PageUnrestricted < temp.parseFunc_RTE.tags.link
-	PageUnrestricted.wrap = <span class="tx-linktypeswitch-page-unrestricted">|</span>
+  PageNonExisting = TEXT
+  PageNonExisting.current = 1
+  PageNonExisting.wrap = <span class="tx-linktypeswitch-link-page-non-existing">|</span>
 
-	key.cObject = USER
-	key.cObject.userFunc = Tx\Linktypeswitch\LinkTypeDetector->detectLinkType
+  PageRestrictedAccessDenied < temp.parseFunc_RTE.tags.link
+  PageRestrictedAccessDenied.wrap = <span class="tx-linktypeswitch-page-access-denied">|</span>
+
+  PageRestrictedAccessGranted < temp.parseFunc_RTE.tags.link
+  PageRestrictedAccessGranted.wrap = <span class="tx-linktypeswitch-page-access-granted">|</span>
+
+  PageRestrictedAccessUndecided < temp.parseFunc_RTE.tags.link
+  PageRestrictedAccessUndecided.wrap = <span class="tx-linktypeswitch-page-access-undecided">|</span>
+
+  PageUnrestricted < temp.parseFunc_RTE.tags.link
+  PageUnrestricted.wrap = <span class="tx-linktypeswitch-page-unrestricted">|</span>
+
+  key.cObject = USER
+  key.cObject.userFunc = Tx\Linktypeswitch\LinkTypeDetector->detectLinkType
 }
 
 page.includeCSS.tx_linktypeswitch = EXT:linktypeswitch/Resources/Public/Css/LinkType.css
